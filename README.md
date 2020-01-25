@@ -23,3 +23,6 @@ docker run -p 53:53/tcp -p 53:53/udp
   --name nextdns \
   steeef/nextdns
 ```
+
+NOTE: this image does not include a DNS server with anything like caching. For
+that you should link this to an instance of `dnsmasq` or `unbound`.
