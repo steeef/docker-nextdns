@@ -1,5 +1,4 @@
 FROM debian:bookworm-slim as build
-LABEL maintainer="Stephen Price <stephen@stp5.net>"
 
 ENV NEXTDNS_VERSION=1.43.5 \
     NEXTDNS_SHA256=e25594aff185358e2e22c339817c3ab2232bbe755644a861eda199989c349c69
@@ -20,6 +19,7 @@ RUN curl -fsSL https://github.com/nextdns/nextdns/releases/download/v${NEXTDNS_V
     && setcap 'cap_net_bind_service=+ep' nextdns
 
 FROM debian:bookworm-slim
+LABEL maintainer="Stephen Price <stephen@stp5.net>"
 
 ENV NEXTDNS_ARGUMENTS="-listen :53 -report-client-info -log-queries"
 ENV UID 1000
