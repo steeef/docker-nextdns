@@ -12,8 +12,7 @@ RUN mkdir /tmp/nextdns
 
 WORKDIR /tmp/nextdns
 
-RUN curl -fsSL https://github.com/nextdns/nextdns/releases/download/v${NEXTDNS_VERSION}/nextdns_${NEXTDNS_VERSION}_linux_amd64.tar.gz -o nextdns/nextdns.tar.gz \
-    && cd nextdns \
+RUN curl -fsSL https://github.com/nextdns/nextdns/releases/download/v${NEXTDNS_VERSION}/nextdns_${NEXTDNS_VERSION}_linux_amd64.tar.gz -o nextdns.tar.gz \
     && echo "${NEXTDNS_SHA256} *nextdns.tar.gz" | sha256sum -c - \
     && tar zxf nextdns.tar.gz \
     && setcap 'cap_net_bind_service=+ep' nextdns
