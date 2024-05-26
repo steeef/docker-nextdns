@@ -1,8 +1,8 @@
-FROM debian:stretch-slim
+FROM debian:bookworm-slim
 LABEL maintainer="Stephen Price <stephen@stp5.net>"
 
-ENV NEXTDNS_VERSION=1.4.35 \
-    NEXTDNS_SHA256=b6bdfe5d5577b6abab985de5748c23e0b27d50b500b89671e09b8235f3bd6ff4
+ENV NEXTDNS_VERSION=1.43.5 \
+    NEXTDNS_SHA256=e25594aff185358e2e22c339817c3ab2232bbe755644a861eda199989c349c69
 
 ENV NEXTDNS_ARGUMENTS="-listen :53 -report-client-info -log-queries"
 ENV UID 1000
