@@ -4,7 +4,7 @@ ENV NEXTDNS_VERSION=1.43.5 \
     NEXTDNS_SHA256=e25594aff185358e2e22c339817c3ab2232bbe755644a861eda199989c349c69
 
 RUN apt-get update \
-  && apt-get install -y curl libcap2-bin
+  && apt-get install -y curl libcap2-bin \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
