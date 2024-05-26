@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: nextdns
+  IMAGE_NAME: steeef/nextdns
 
 jobs:
   build-and-push-image:
