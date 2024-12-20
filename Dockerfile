@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim as build
 
-ENV NEXTDNS_VERSION=1.43.5 \
-    NEXTDNS_SHA256=e25594aff185358e2e22c339817c3ab2232bbe755644a861eda199989c349c69
+ENV NEXTDNS_VERSION=1.44.0 \
+    NEXTDNS_SHA256=ba4a2ef22bff8181ea843b32b132500c09012a0a0b5d04a23f2458b4be85eb68
 
 RUN apt-get update \
   && apt-get install -y curl libcap2-bin \
